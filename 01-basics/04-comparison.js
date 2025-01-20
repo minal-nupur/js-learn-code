@@ -21,7 +21,7 @@ console.log(undefined >= 0); // false
 //It checks for value and datatype as well
 
 console.log("2" == 2); // true
-console.log("2" === 2);  // false // diffrent datatype // string number
+console.log("2" === 2);  // false // diffrent datatype // string and number
 
 
 
