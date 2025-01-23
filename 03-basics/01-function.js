@@ -70,5 +70,74 @@ console.log(loginUserMessage2())
 //Please enter the user name
 //undefined
 
+/// Function with Object and array
+//: With Object
+
+console.log(calculatePrice("function with object :::::::"));
+function calculatePrice(num1){
+    return num1;
+}
+console.log(calculatePrice(2)); // 2
+
+// with multiple arguments
+console.log(calculatePrice(200,400,500)) // 200 // return only first value
+// to overcome this issue use RestOperator(...)
+
+function calculatePrice1(...num1){
+    return num1
+}
+console.log(calculatePrice1(200,600,780))  // [ 200, 600, 780 ]
+
+// Sometime also used:
+function calculatePrice2(val1, val2, ...num1){
+    return num1
+}
+console.log(calculatePrice2(200,400,500,600)) // [ 500, 600 ] // initial two are in val1 and val2
+
+// Object passed
+const user = {
+    userName : "minal",
+    price : "23"
+}
+
+function handleObject(anyObject){
+    console.log(`User is ${anyObject.userName} and price is ${anyObject.price}`)
+}
+
+handleObject(user)// User is minal and price is 23
+
+handleObject({
+    userName : "Nupur",
+    price: 45
+})
+/// User is Nupur and price is 45
+
+const user1 = {
+    userName : "minal"
+}
+console.log(`Enter correct data example`)
+function handleObject(anyObject){
+    if(anyObject.userName===undefined || anyObject.price=== undefined){
+        console.log(`Enter correct data`)
+        return
+    }
+
+    return`User is ${anyObject.userName} and price is ${anyObject.price}`
+}
+
+console.log(handleObject(user1))// Enter correct data
+
+
+
+// Insert Array in function
+const myNewArray = [300,600,900]
+
+function returnSecondValue(getArray){
+    return getArray[1];
+}
+console.log(returnSecondValue(myNewArray)) // 600
+
+console.log(returnSecondValue([300,89,12])) // 89
+
 
 
