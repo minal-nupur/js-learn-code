@@ -104,4 +104,40 @@ console.log(tinerUser.hasOwnProperty('isLogged')) // false
 console.log(tinerUser.hasOwnProperty('isLoggedIn')) // true
 
 
+//// Destructuring of Object
+const course = {
+    couseName : " js learning",
+    price: "999",
+    couseInstructor:"minal"
+}
+// for access
+console.log(course.couseInstructor) // minal
+
+// but every time we cannot write course.couseInstructor mutliple time
+// instead we can destructure the name
+
+// we can directly call it after it conversion
+const {couseInstructor} = course
+console.log(couseInstructor) // minal
+
+// couseInstructor -> can change the name of it as it is too long
+const {couseInstructor: instructor} = course
+console.log(instructor) // minal
+
+// also we can do in this way
+console.log({couseInstructor}) // { couseInstructor: 'minal' }
+
+// JSON Formate type : below seems like error but its not an error is a correct json formate
+// {
+//     "name" : "minal",
+//     "coursename": "js study",
+//     "price": "free"
+// }
+// some time also api can be in array
+// [{},
+//     {},
+//     {}
+// ]
+
+
 
