@@ -39,3 +39,59 @@ console.log(i)// 300
 console.log(m) //2
 
 
+// Nested scope
+
+function one(){
+    const userName = "minal"
+    function two(){
+        const website = "youtuber"
+        console.log(userName)
+    }
+    //console.log(website)  // ReferenceError: website is not defined
+    two()
+}
+one()
+
+///////
+
+if(true){
+    const userName = "minal"
+    if(userName==="minal"){
+    const website = "  youtuber"
+    console.log(userName + website) // o/p  :minal  youtuber
+}
+//console.log(website) // ReferenceError: website is not defined
+}
+//console.log(userName) //ReferenceError: userName is not defined
+
+/// Two ways to define function
+
+function addOne(num){
+    return num+1
+}
+addOne(5) // no o/p as it just returning not printing
+
+// By using variable defining function
+const addTwo = function(num){
+    return num+2
+}
+addTwo(9)  // no o/p as it just returning not printing
+
+// In case if function is been called before initialization below this happen in 
+// both type of defnition:
+
+console.log(addOne1(6)); // 7
+function addOne1(num){
+    return num+1
+}
+
+////////
+console.log(addTwo2(2)); // ReferenceError: Cannot access 'addTwo2' before initialization
+const addTwo2 = function(num){
+    return num+2
+}
+
+
+
+
+
